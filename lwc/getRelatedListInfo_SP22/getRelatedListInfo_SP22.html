@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="getRecordListInfo">
+        <div class="slds-m-around_medium">
+            <template if:true={relatedListData}>
+                <p> Related list FieldApi Info -  </p>
+                <template for:each={relatedListData} for:item="rel">
+                    <div key={rel.fieldApiName}>
+                       {rel.fieldApiName}
+                    </div>
+                </template>
+            </template>
+            
+        </div>
+    </lightning-card>
+</template>

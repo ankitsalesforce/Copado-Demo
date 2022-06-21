@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="getRelatedListRecord">
+        <p>Related record - </p>
+        <template if:true={relatedListInfo}>
+            <template for:each={relatedListInfo} for:item="rel">
+                <div key={rel.fields.Id.value}> 
+                    {rel.fields.Name.value}
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
